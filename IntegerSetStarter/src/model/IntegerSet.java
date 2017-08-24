@@ -15,4 +15,10 @@ public class IntegerSet {
 
     }
 
+    // EFFECTS: returns true if set contains num
+    public boolean contains(Integer num) { return false; }
+
+    // EFFECTS: returns size of set
+    public Integer size() { return 0; }
+
 }
