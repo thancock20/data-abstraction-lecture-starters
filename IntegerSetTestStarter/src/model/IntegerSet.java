@@ -21,7 +21,9 @@ public class IntegerSet {
     // EFFECTS: if the integer is in the integer set, then remove it from the integer set.
     //          Otherwise, do nothing.
     public void remove(Integer num) {
-
+        if(internalArray.contains(num)) {
+            internalArray.remove(num);
+        }
     }
 
     // EFFECTS: if the integer is contained within the set, return true. Otherwise return false.

@@ -32,6 +32,34 @@ public class IntegerSetTest {
         checkSetContainsOnce(3);
     }
 
+    @Test
+    public void testRemoveNotThere() {
+        checkEmptyDoesntContain(3);
+        testSet.remove(3);
+        checkEmptyDoesntContain(3);
+    }
+
+    @Test
+    public void testRemoveIsThere() {
+        checkEmptyDoesntContain(3);
+        testSet.insert(3);
+        checkSetContainsOnce(3);
+        testSet.remove(3);
+        checkEmptyDoesntContain(3);
+    }
+
+    @Test
+    public void testRemoveMultipleItems() {
+        checkEmptyDoesntContain(3);
+        checkEmptyDoesntContain(4);
+        testSet.insert(3);
+        testSet.insert(4);
+        testSet.remove(3);
+        testSet.remove(4);
+        checkEmptyDoesntContain(3);
+        checkEmptyDoesntContain(4);
+    }
+
     private void checkEmptyDoesntContain(int num) {
         assertEquals(testSet.size(), 0);
         assertFalse(testSet.contains(num));
