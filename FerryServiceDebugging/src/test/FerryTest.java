@@ -43,8 +43,7 @@ public class FerryTest {
     public void testChangeItinerary() {
         String newDest = "Juneau";
         testFerry.setDestination(newDest);
-        Ferry comparison = new Ferry(newDest,testDate,testPrice);
-        assertEquals(comparison,testFerry);
+        assertEquals(newDest, testFerry.getDestination());
     }
 
 

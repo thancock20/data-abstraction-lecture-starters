@@ -38,6 +38,7 @@ public class FerryCard {
 
         Ticket ticket = new Ticket(ferry, owner);
         ferry.addTicket(ticket);
+        balance -= ticketPrice;
         return true;
     }
 
